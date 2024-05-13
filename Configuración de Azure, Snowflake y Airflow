@@ -1,0 +1,19 @@
+Documentación para configurar la estructura en Azure integrando Snowflake y Airflow, asegurando la seguridad y eficiencia.
+
+NOTA: Derivado de que no se cuenta con una instancia real de Azure, la siguiente documentación muestra los pasos a seguir y consideraciones que se deben tomar en cuenta.
+
+1. Creación de una red virtual (VNet): Configurar una red virtual en Azure para alojar los recursos permitirá tener un entorno virtual aislado y seguro para los servicios.
+
+2. Instancia de Snowflake en Azure: Es posible utilizar Snowflake a través de la integración con Azure, para esto se debe crear una instancia de Snowflake en la región de Azure que mejor se adapte a nuestras necesidades y requisitos de cumplimiento.
+
+3. Integración de Snowflake con la red virtual: Se debe configurar la instancia de Snowflake para que se conecte a la red virtual que creamos en el punto 1 en Azure. Esto asegurará una conexión segura y eficiente entre Snowflake y otros servicios en el entorno de Azure.
+
+4. Configuración de Airflow en Azure: Primero debemos crear una instancia de Airflow en Azure, esto puede ser mediante una máquina virtual o utilizando servicios administrados como Azure Kubernetes Service (AKS). Aquí es importante asegurarnos que Airflow esté configurado para conectarse a la misma red virtual que Snowflake para facilitar la comunicación segura entre ambos servicios.
+
+5. Configruación de la seguridad: Para esto debemos utilizar las características de seguridad proporcionadas por Snowflake y Airflow para garantizar la protección de los datos y procesos. Esto incluye el control de acceso basado en roles, la autenticación de múltiples factores y el cifrado de datos en reposo y en tránsito.
+
+6. Gestión de credenciales: Podemos utilizar Azure Key Vault para almacenar y gestionar de forma segura las credenciales para acceder a Snowflake y Airflow. Con esto podemos garantizar que las credenciales se almacenan de forma segura y estén disponibles en todo momento.
+
+7. Escalabilidad y rendimiento: Debemos configurar Snowflake y Airflow para escalar según las cargas de trabajo y picos de procesamiento. Esto puede implicar el uso de instancias de Snowflake de diferentes tamaños y configuraciones, así como la implementación de Airflow en un entorno escalable y elástico.
+
+8. Automatización y orquestación: A través de Airflow orquestaremos y automatizaremos los flujos de trabajo de datos, incluyeno la integración con Snowflake para la carga, transformación y análisis de datos. 
